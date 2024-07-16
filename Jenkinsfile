@@ -17,12 +17,12 @@ pipeline{
                 echo " ========executing Github checkout/clone repo======== "
             }
         }
-        stage("mvn build"){
-            steps{
-                sh 'mvn clean install'
-                echo " completed maven build "
-            }
-        }      
+        // stage("mvn build"){
+        //     steps{
+        //         sh 'mvn clean install'
+        //         echo " completed maven build "
+        //     }
+        // }      
         stage("sonarqube analysis"){
             steps{
                 echo "====++++executing sonarqube analysis===="
